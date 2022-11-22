@@ -16,6 +16,13 @@ let one = (arr) => {
     console.log(`after ${sum2}`)
 };
 
-let two = () => {
-
+let two = (arr,arr2) => {
+    for (let i=0;i<arr.length;i++) {
+        for (let y=0;y<arr2.length;y++) {
+            if (arr[i] === arr2[y]) {
+                console.log(arr[y])
+            };
+        };
+    };
 };
+
