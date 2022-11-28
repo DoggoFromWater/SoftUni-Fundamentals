@@ -45,6 +45,41 @@ let four = (arr, num) => {
     console.log(arr)
 };
 
-let five = () => {
+let five = (arr) => {
+    let top = [];
+    for (let i=0;i<arr.length;i++) {
+        for (let y=arr.length - 1;y>i;y--) {
+            if (y = i + 1 && arr[i] > arr[i+1]) {
+                top.push(arr[i])
+            }
+            else if (arr[i] <= arr[y]) {
+                break
+            }
+        };
+    };
+    top.push(arr[arr.length-1])
+    console.log(top.join(" "))
+};
+
+let six = (arr) => {//pretty cool - calculates left/right from index and compares them
+    let sum = 0
+    if (arr.length==1) {
+        console.log(0)
+    }
+    else {
+        for (let i=1;i<arr.length;i++) {
+            let sum2 = 0
+            sum=sum + arr[i-1]
+            for (let y=i + 1;y<arr.length;y++) {
+                sum2 = sum2 + arr[y]
+                if (sum2 == sum) {
+                    return i
+                };
+            };
+        };
+    };
+};
+
+let seven = (arr) => {
 
 };
